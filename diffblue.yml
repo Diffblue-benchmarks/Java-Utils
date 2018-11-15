@@ -7,21 +7,25 @@ phases:
  cbmcArguments:
    java-assume-inputs-non-null: true
    max-nondet-array-length: 10
-   unwind: 1
+   max-nondet-string-length: 35
+   do-not-test-methods-with-access: [ private ]
+   cover-function-only: false
+   unwind: 5
 -
  timeout: 300
  cbmcArguments:
    java-assume-inputs-non-null: true
    max-nondet-array-length: 20
+   max-nondet-string-length: 50
    do-not-test-methods-with-access: [ private ]
    cover-function-only: false
-   unwind: 3
+   unwind: 10
 -
  timeout: 300
  cbmcArguments:
    java-assume-inputs-non-null: true
    max-nondet-array-length: 30
-   max-nondet-string-length: 10
+   max-nondet-string-length: 80
    do-not-test-methods-with-access: [ private ]
    cover-function-only: false
-   unwind: 5
+   unwind: 15
